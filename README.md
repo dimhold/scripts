@@ -13,19 +13,24 @@ make
 #Commands:
 
 ###Security:
-For generate password for domain:
+* Generate password for domain:
 
 `pass google`
 
 
 ###Gentoo:
-Sync portage, update, dep clean and revdep-rebuild:
+* Sync portage, update, dep clean and revdep-rebuild:
+
 `update-gentoo`
 
-Rebuild world
+
+* Rebuild world:
+
 `rebuild-world-gentoo`
 
-After rebuild linux kernel, just run:
+
+* After rebuild linux kernel, just run:
+
 `virtual-box-fix-after-linux-update`
 
 
