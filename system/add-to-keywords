@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source common-lib
+
+ARGS=$@
+
+add_package_to_keywords_file() {
+	local package=$1
+	echo "$package ~amd64" >> /etc/portage/package.keywords
+}
+
+main() {
+	run_only_in_super_user_mode $BASH_SOURCE $ARGS
+
+	package=$1
+	if [ -z $package ]; then 
+		echo "package is empty"
+	fi
+
+
+
+	$(add_package_to_keywords_file $package)
+	echo "$package added to keywords file"
+}
+
+main $1
